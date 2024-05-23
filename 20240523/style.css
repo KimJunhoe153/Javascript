@@ -1,0 +1,29 @@
+p {
+  font-style: italic;
+}
+
+.classSelect {
+  color: dodgerblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-style: nomal;
+  font-weight: 700;
+}
+
+#idSelect {
+  color: green;
+  text-decoration: underline;
+}
+
+.s1 {
+  text-transform: capitalize;
+  letter-spacing: 4px; /* 자간 */
+  word-spacing: 16px; /* 단어간 */
+  border: 3px solid gray; /* 외곽선 */
+  background-color: rgba(
+    95,
+    158,
+    160,
+    0.5
+  ); /* opacity는 0.1 ~ 1 사이의 값으로 */
+}
