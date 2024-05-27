@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
+  position: relative;
+}
+
+.namecard {
+  /* position: absolute; */
+  width: 250px;
+  height: 150px;
+  margin: 0 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 219, 112, 0.8) 45%,
+    rgba(132, 50, 255, 0.6) 50%,
+    transparent 54%
+  );
+  filter: brightness(1.1) opacity(0.8);
+  mix-blend-mode: color-dodge;
+  background-size: 150% 150%;
+  background-position: 100%;
+  transition: all 0.1s;
+}
+
+.c1 {
+  background-color: lightgreen;
+}
+
+.c2 {
+  background-color: teal;
+}
+
+.c3 {
+  background-color: lightgray;
+}
+
+.c4 {
+  background-color: khaki;
+}
+
+.hadding {
+  margin-bottom: 30px;
+  color: dodgerblue;
+}
