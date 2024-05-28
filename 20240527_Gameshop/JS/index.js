@@ -30,6 +30,9 @@ function displayProducts(gameData) {
       game.appendChild(title);
       game.appendChild(genre);
       game.appendChild(price);
+      game.addEventListener("click", () => {
+        window.location.href = "singleProduct.html?id=" + data.id;
+      });
       content.appendChild(game);
     });
   }

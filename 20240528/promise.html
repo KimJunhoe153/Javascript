@@ -9,6 +9,28 @@
     <script>
       // 비동기 작업
       // Promise 객체
+      const success = true;
+      const promise = new Promise((resolve, reject) => {
+        if (success) {
+          resolve("성공");
+        } else {
+          reject("실패");
+        }
+        return "리턴구문은 처리될까요? 아무런 의미가 없다.. 안됨..";
+      });
+      // Promise 객체 사용
+      promise
+        .then((response) => {
+          console.log(response);
+          // then 구문에서 리턴한 데이터는 다음번 then 구문의 매개변수로 전달됨
+          return "성공 리턴";
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     </script>
   </body>
 </html>

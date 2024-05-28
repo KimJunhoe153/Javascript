@@ -11,6 +11,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins, KCC-Hanbit;
+  text-decoration: none; /* 보라 밑줄 */
+  color: inherit;
 }
 
 .container {
@@ -74,8 +76,15 @@
 .game {
   border-radius: 5px;
   border: 5px ridge dodgerblue;
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease; /* 위로 올라오는 애니메이션 */
   background-color: white;
+}
+
+.game:hover {
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  transform: translate(0px, -5px);
+  cursor: pointer;
 }
 
 .image {
@@ -85,4 +94,14 @@
 
 .content p {
   margin: 0 0 5px 10px;
+}
+
+.singleProduct {
+  width: 100%;
+  background-color: lightskyblue;
+  padding: 20px;
+}
+
+.singleProduct p {
+  margin: 10px 20px;
 }
