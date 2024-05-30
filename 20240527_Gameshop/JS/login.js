@@ -1,5 +1,6 @@
 const urlLogin = "http://localhost:8080/user/login";
 const urlLogout = "http://localhost:8080/user/logout";
+const urlSignup = "http://localhost:8080/user/signup";
 let userId = "";
 let password = "";
 
@@ -35,6 +36,21 @@ document.querySelector(".loginBtn").addEventListener("click", () => {
       console.log("에러발생 : ", error);
     });
 });
+
+axios
+  .post(urlLogout, data, { withCredentials: true }) // url 옆에 전송할 객체 넣음
+  .then((response) => {
+    console.log("데이터 :", response);
+    if (response.status == 200) {
+      document.querySelector(".login-box").classList.add("hidden");
+      document.querySelector(".user-box").classList.remove("hidden");
+      document.querySelector(".user-box p").textContent =
+        response.data + "님 환영합니다.";
+    }
+  })
+  .catch((error) => {
+    console.log("에러발생 : ", error);
+  });
 
 function sessionCurrent() {
   axios
