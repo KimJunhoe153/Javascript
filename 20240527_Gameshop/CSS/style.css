@@ -18,7 +18,7 @@
 .container {
   width: 70%;
   margin: 0 auto;
-  border: 1px solid #17263f;
+  /* border: 1px solid #17263f; */
 }
 
 .title {
@@ -77,8 +77,8 @@
 
 .game {
   border-radius: 5px;
-  border: 5px ridge #00deff;
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+  border: 5px solid #00deff;
+  box-shadow: 2px 2px 5px 2px #00deff(0, 0, 0, 0.2);
   transition: all 0.2s ease; /* 위로 올라오는 애니메이션 */
   background-color: white;
 }
@@ -127,9 +127,9 @@
   /* margin-left: 30px; */
   padding: 30px;
   background-color: white;
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 2);
+  /* box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 2); */
   font-size: 1.3rem;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .loginBtn {
@@ -140,7 +140,7 @@
   font-weight: 700;
   text-align: center;
   line-height: 35px;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -152,7 +152,7 @@
   font-weight: 700;
   text-align: center;
   line-height: 35px;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   margin-top: 30px;
 }
@@ -170,7 +170,7 @@
   font-weight: 700;
   text-align: center;
   line-height: 35px;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   margin-top: 50px;
 }
@@ -190,7 +190,7 @@
   background-color: white;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
   font-size: 1.5rem;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .low-box {
@@ -208,7 +208,7 @@
   font-weight: 700;
   text-align: center;
   line-height: 35px;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -224,7 +224,7 @@
   font-weight: 700;
   text-align: center;
   line-height: 35px;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -236,7 +236,6 @@
   font-weight: 700;
   text-align: center;
   line-height: 35px;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
-  margin-top: 30px;
 }

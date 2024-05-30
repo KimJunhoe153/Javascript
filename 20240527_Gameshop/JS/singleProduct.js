@@ -15,7 +15,7 @@ axios
   });
 
 function displaySingleProduct(data) {
-  const product = document.querySelector(".singleProduct");
+  const singleProduct = document.querySelector(".singleProduct");
   // 태그 요소 생성
   const game = document.createElement("div");
   const img = document.createElement("img");
@@ -53,18 +53,30 @@ function displaySingleProduct(data) {
   lowBox.appendChild(right);
   game.appendChild(img);
   game.appendChild(lowBox);
-  product.appendChild(game);
+  singleProduct.appendChild(game);
+
+  document.querySelector(".cartBtn").addEventListener("click", () => {
+    sessionCurrent(data);
+  });
 }
 
-document.querySelector(".cartBtn").addEventListener("click", () => {
-  sessionCurrent();
-});
-
-function sessionCurrent() {
+function sessionCurrent(data) {
   axios
-    .get("http://localhost:8080/user/current", { withCredentials: true })
-    .than((response) => {})
+    .get("http://localhost:8080/user/current", { widthCredentials: true })
+    .then((response) => {
+      console.log("데이터 : ", response.data);
+      if (response.status == 200) {
+        const userId = response.data;
+        let cartItems = JSON.parse(localStorage.getItem(userId));
+        if (!cartItems) {
+          cartItems = [];
+        }
+        cartItems.push(data);
+        localStorage.setItem(userId, JSON.stringify(cartItems));
+      }
+    })
     .catch((error) => {
       console.log("에러 발생 : ", error);
+      alert("로그인해주세요");
     });
 }
