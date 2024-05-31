@@ -1,6 +1,6 @@
 const urlLogin = "http://localhost:8080/user/login";
 const urlLogout = "http://localhost:8080/user/logout";
-const urlsignUp = "http://localhost:8080/user/signup";
+const urlSignUp = "http://localhost:8080/user/signup";
 
 let userId = "";
 let password = "";
@@ -64,9 +64,11 @@ document.querySelector(".signupBtn").addEventListener("click", () => {
   };
   if (confirm("회원가입 하시겠습니까?")) {
     axios
-      .post(urlSignup, data, { withCredentials: true })
+      .post(urlSignUp, data, { withCredentials: true })
       .then((response) => {
         console.log("데이터: ", response);
+        alert("회원가입이 완료되었습니다! 🎉 로그인 해주세요 ~.~");
+        window.location.reload();
       })
       .catch((error) => {
         console.log("에러 발생 : ", error);
@@ -76,7 +78,7 @@ document.querySelector(".signupBtn").addEventListener("click", () => {
 
 document.querySelector(".signupBtn").addEventListener("click", () => {
   document.querySelector(".login-box").classList.add("hidden");
-  document.querySelector(".signUp-box").classList.remove("hidden");
+  document.querySelector(".signup-box").classList.remove("hidden");
 });
 
 document.querySelector("#signupUserId").addEventListener("change", (e) => {
@@ -110,7 +112,7 @@ function sessionCurrent() {
           document.querySelector(".login-box").classList.add("hidden");
           document.querySelector(".user-box").classList.remove("hidden");
           document.querySelector(".user-box p").textContent =
-            response.data + "님 환영합니다.";
+            response.data.userId + "님 환영합니다.";
         }
       }
     })
