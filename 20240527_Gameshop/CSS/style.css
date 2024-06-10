@@ -204,6 +204,22 @@
   display: none;
 }
 
+.signup {
+  width: 100px;
+  height: 40px;
+  background-color: #00deff;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.signup:hover {
+  background-color: lightblue;
+  color: dodgerblue;
+}
+
 .signup-box {
   width: 100px;
   height: 40px;
