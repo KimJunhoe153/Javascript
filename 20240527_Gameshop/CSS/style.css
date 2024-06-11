@@ -114,6 +114,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .login-box {
@@ -290,7 +291,6 @@ thead {
   cursor: pointer;
 }
 
-/* hidden 클래스 스타일은 파일의 제일 아래에 놓기 */
-.hidden {
+hidden 클래스 스타일은 파일의 제일 아래에 놓기 .hidden {
   display: none;
 }
